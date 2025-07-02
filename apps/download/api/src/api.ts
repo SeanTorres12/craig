@@ -21,8 +21,10 @@ export let server: FastifyInstance;
 export async function start(): Promise<void> {
   try {
     await access(downloadPath);
+    console.info(`Using download directory ${downloadPath}`);
   } catch (e) {
-    await mkdir(downloadPath);
+    await mkdir(downloadPath, { recursive: true });
+    console.info(`Created download directory ${downloadPath}`);
   }
 
   await redisClient.connect();
