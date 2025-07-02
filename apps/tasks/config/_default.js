@@ -36,7 +36,8 @@ module.exports = {
   },
 
   downloads: {
-    expiration: 24 * 60 * 60 * 1000,
+    // Set expiration to 0 to keep files indefinitely
+    expiration: 0,
     path: '../download/downloads'
   },
 
