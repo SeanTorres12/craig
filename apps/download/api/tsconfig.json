@@ -6,3 +6,4 @@
   },
   "include": ["./src/**/*"]
 }
+// Set DOWNLOAD_DIR to change the downloads folder used by the API
